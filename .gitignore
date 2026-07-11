@@ -1,4 +1,9 @@
 node_modules
+.DS_Store
+types/
 test/fixtures/*.actual.css
-src/parser.js
 yarn-error.log
+reports/
+.stryker-tmp/
+test/corpus/github/files/
+test/corpus/github/.harvest-state.json

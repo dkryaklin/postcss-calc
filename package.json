@@ -22,31 +22,35 @@
     "LICENSE"
   ],
   "scripts": {
-    "prepare": "pnpm run build && tsc",
-    "build": "jison ./parser.jison -o src/parser.js",
     "lint": "eslint . && tsc",
-    "test": "node --test"
+    "test": "node --test",
+    "test:mutation": "stryker run"
   },
   "author": "Andy Jansson",
   "license": "MIT",
   "engines": {
-    "node": "^18.12 || ^20.9 || >=22.0"
+    "node": "^22.12 || ^24.11 || >=26.0"
   },
   "devDependencies": {
+    "@csstools/css-calc": "^3.2.0",
     "@eslint/js": "^10.0.1",
-    "@types/node": "^25.6.0",
-    "eslint": "^10.2.1",
+    "@rmenke/css-tokenizer-tests": "^1.2.0",
+    "@stryker-mutator/core": "^9.6.1",
+    "@stryker-mutator/typescript-checker": "^9.6.1",
+    "@types/node": "^26.1.1",
+    "eslint": "^10.6.0",
     "eslint-config-prettier": "^10.1.8",
-    "jison-gho": "0.6.1-216",
-    "postcss": "^8.5.10",
-    "prettier": "^3.8.3",
+    "eslint-plugin-sonarjs": "^4.0.3",
+    "fast-check": "^4.7.0",
+    "postcss": "^8.5.16",
+    "prettier": "^3.9.5",
     "typescript": "~6.0.3"
   },
   "dependencies": {
-    "postcss-selector-parser": "^7.1.1",
+    "@csstools/css-tokenizer": "^4.0.0",
     "postcss-value-parser": "^4.2.0"
   },
   "peerDependencies": {
-    "postcss": "^8.4.38"
+    "postcss": "^8.5.16"
   }
 }
